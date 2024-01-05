@@ -1,6 +1,5 @@
 import random
 
-
 class Environment:
     def __init__(self):
         '''Initalizes its internal state, which is the number
@@ -44,6 +43,7 @@ class Agent:
         current_obs = env.get_observation()
         actions = env.get_actions()
         reward = env.action(random.choice(actions))
+        print(actions, reward)
         self.total_reward += reward
 
 if __name__ == "__main__":
